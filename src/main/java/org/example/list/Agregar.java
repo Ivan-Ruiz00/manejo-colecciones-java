@@ -62,3 +62,8 @@ class Multiplicar{
         return multiplicacion;
     }
 }
+class Comprar{
+    public static void comprar(List<Producto> lista,Producto producto){
+        lista.get(lista.indexOf(producto)).setComprado(true);
+    }
+}
