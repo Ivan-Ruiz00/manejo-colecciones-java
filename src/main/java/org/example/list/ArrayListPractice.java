@@ -9,7 +9,8 @@ public class ArrayListPractice {
      * de dato involucrados.
      */
     static List<Fruta> frutas=new ArrayList<>();
-    public static void ejecutar(){
+    static List<Integer> numeros=new ArrayList<>();
+    public static void ejecutarUno(){
         Vacio.esVacio(frutas);
         System.out.println();
         Agregar.agregar(frutas,"Arándanos");
@@ -21,7 +22,15 @@ public class ArrayListPractice {
         Reemplazar.reemplazar(frutas,frutas.indexOf("Arándanos"),"Sandías");
         System.out.println(frutas);
         Pertenece.contiene(frutas,"Sandías");
-        Remover.remover(frutas,"Fresas");
         System.out.print(frutas);
+        System.out.println("\n");
+    }
+    public static void ejecutarDos(){
+        for(int i=0;i<15;i++)
+            Agregar.agregar(numeros,RandomNumber.random());
+        System.out.println(numeros);
+        System.out.println("La suma de los números es: "+Sumar.sumar(numeros));
+        System.out.println("La resta de los números es: "+Restar.restar(numeros));
+        System.out.println("La multiplicación de los números: "+Multiplicar.multiplicar(numeros));
     }
 }

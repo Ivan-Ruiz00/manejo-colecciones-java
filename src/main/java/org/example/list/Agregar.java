@@ -1,6 +1,7 @@
 package org.example.list;
 import java.util.List;
-public class Agregar {
+import java.util.Random;
+public class Agregar{
     public static void agregar(List lista,Object objeto){
         lista.add(objeto);
     }
@@ -29,5 +30,35 @@ class Pertenece{
 class Reemplazar{
     public static void reemplazar(List lista,int indice,Object objeto){
         lista.set(indice,objeto);
+    }
+}
+class RandomNumber{
+    static Random random=new Random();
+    public static int random(){
+        return random.nextInt(100)+1;
+    }
+}
+class Sumar{
+    public static int sumar(List lista){
+        int suma=0;
+        for(Object objeto:lista)
+            suma+=(int)objeto;
+        return suma;
+    }
+}
+class Restar{
+    public static int restar(List lista){
+        int resta=(int)lista.get(0);
+        for(int i=1;i<lista.size();i++)
+            resta-=(int)lista.get(i);
+        return resta;
+    }
+}
+class Multiplicar{
+    public static int multiplicar(List lista){
+        int multiplicacion=-1;
+        for(Object numero:lista)
+            multiplicacion=multiplicacion*(int)numero;
+        return multiplicacion;
     }
 }
